@@ -7,7 +7,16 @@ on:
 jobs:
   build:
     runs-on: firstRunner
-    
+
     steps:
       - uses: actions/checkout@v4
-     
+    
+      - name: taking down prevoius version
+        run: |
+          docker compose down
+          
+      - name: taking Up 
+        run: |
+          docker compose up -d --build   
+
+      
