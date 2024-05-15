@@ -13,10 +13,9 @@ jobs:
     
       - name: taking down prevoius version
         run: |
-          docker compose down
-          
+          docker-compose down
+
       - name: taking Up 
         run: |
-          docker compose up -d --build   
+          docker-compose up -d --build   
 
-      
